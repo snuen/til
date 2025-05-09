@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Script to lint and format markdown files
+
+echo "Linting markdown files..."
+npm run lint:fix
+
+echo "Formatting markdown files..."
+npm run format
+
+echo "Done! All markdown files have been linted and formatted."

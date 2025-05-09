@@ -1,7 +1,6 @@
 # Today I Learned (TIL)
 
-A collection of concise write-ups on small things I learn day to day across various
-languages and technologies.
+A collection of concise write-ups on small things I learn day to day across various languages and technologies.
 
 ## Structure
 
@@ -35,6 +34,37 @@ Each entry should include:
 - Code examples (if applicable)
 - References (if applicable)
 
+## Markdown Linting and Formatting
+
+This project includes tools for linting and formatting markdown files to maintain consistent style:
+
+- **markdownlint**: Checks markdown files for style issues
+- **prettier**: Formats markdown files consistently
+
+### Usage
+
+Run the following commands to lint and format markdown files:
+
+```bash
+# Lint markdown files
+npm run lint
+
+# Lint and fix markdown files
+npm run lint:fix
+
+# Format markdown files
+npm run format
+
+# Run both linting and formatting
+npm run check
+```
+
+Alternatively, use the provided shell script:
+
+```bash
+./format_markdown.sh
+```
+
 ## Example Entry Format
 
 ```markdown
@@ -42,8 +72,7 @@ Each entry should include:
 
 Today I learned how to use Git's interactive rebase feature to clean up my commit history before pushing.
 
-Command:
-`git rebase -i HEAD~3`
+Command: `git rebase -i HEAD~3`
 
 This opens an editor where you can:
 
