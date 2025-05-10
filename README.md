@@ -6,7 +6,7 @@ A collection of concise write-ups on small things I learn day to day across vari
 
 The content is organized by year and month:
 
-```
+```txt
 /2025
   /05.md  # May 2025
   /06.md  # June 2025
@@ -42,8 +42,6 @@ This project includes tools for linting and formatting markdown files to maintai
 
 - **markdownlint**: Checks markdown files for style issues
 - **prettier**: Formats markdown files consistently
-
-### Usage
 
 Run the following commands to lint and format markdown files:
 
