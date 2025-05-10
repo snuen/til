@@ -34,7 +34,7 @@ This file contains things I learned during $MONTH_NAME $YEAR.
 
 ### Example/Code (if applicable)
 
-\`\`\`
+\`\`\`txt
 # Code example here
 \`\`\`
 
@@ -53,7 +53,7 @@ This file contains things I learned during $MONTH_NAME $YEAR.
 
 ### Example/Code (if applicable)
 
-\`\`\`
+\`\`\`txt
 # Code example here
 \`\`\`
 

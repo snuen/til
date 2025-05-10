@@ -21,9 +21,11 @@ To add a new entry, simply edit the markdown file for the current month. If the 
 
 1. Create it manually following the existing naming pattern
 2. Use the provided script to generate it automatically:
+
+   ```sh
+   sh bin/create_monthly_file.sh
    ```
-   ./create_monthly_file.sh
-   ```
+
    This script will create a new markdown file for the current month with a template entry for today's date.
 
 Each entry should include:
@@ -61,8 +63,8 @@ npm run check
 
 Alternatively, use the provided shell script:
 
-```bash
-./format_markdown.sh
+```sh
+sh bin/format_markdown.sh
 ```
 
 ## Example Entry Format
