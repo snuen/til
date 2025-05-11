@@ -59,12 +59,6 @@ npm run format
 npm run check
 ```
 
-Alternatively, use the provided shell script:
-
-```sh
-sh bin/format_markdown.sh
-```
-
 ## Example Entry Format
 
 ```markdown
