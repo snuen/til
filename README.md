@@ -2,6 +2,24 @@
 
 A collection of concise write-ups on small things I learn day to day across various languages and technologies.
 
+## Version Management with mise
+
+This project uses [mise](https://mise.jdx.dev/), a fast, cross-platform version manager, to ensure consistent versions
+of tools (like Node.js, Python, etc.) across different environments. Tool versions are specified in mise.toml.
+
+To install and use the required tool versions:
+
+```sh
+# Install mise (see official docs for latest instructions)
+curl https://mise.run | sh # Install all tools specified in mise.toml mise install
+
+# Activate mise in the current shell by adding the following to your shell configuration file
+echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
+
+# Install all tools specified in mise.toml mise install
+mise install
+```
+
 ## Structure
 
 The content is organized by year and month:
