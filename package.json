@@ -2,13 +2,13 @@
   "name": "til",
   "version": "1.0.0",
   "description": "A collection of concise write-ups on small things I learn day to day across various languages and technologies.",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "markdownlint \"**/*.md\" --ignore node_modules",
     "lint:fix": "markdownlint \"**/*.md\" --ignore node_modules --fix",
     "format": "prettier --write \"**/*.md\"",
-    "check": "npm run lint && npm run format",
+    "check": "bun run lint && bun run format",
     "prepare": "husky"
   },
   "keywords": [],
@@ -17,6 +17,11 @@
   "devDependencies": {
     "husky": "^9.1.7",
     "markdownlint-cli": "^0.44.0",
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "@types/bun": "latest"
+  },
+  "private": true,
+  "peerDependencies": {
+    "typescript": "^5"
   }
 }
