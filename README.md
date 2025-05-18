@@ -2,25 +2,34 @@
 
 A collection of concise write-ups on small things I learn day to day across various languages and technologies.
 
+## Requirements
+
+- [mise](https://mise.jdx.dev/) (for managing tool versions)
+- [Bun](https://bun.sh/) (for running the API server and scripts)
+
 ## Version Management with mise
 
 This project uses [mise](https://mise.jdx.dev/), a fast, cross-platform version manager, to ensure consistent versions
-of tools (like Node.js, Python, etc.) across different environments. Tool versions are specified in mise.toml.
+of tools (like Node.js, Python, Bun, etc.) across different environments. Tool versions are specified in mise.toml.
 
 To install and use the required tool versions:
 
 ```sh
 # Install mise (see official docs for latest instructions)
-curl https://mise.run | sh # Install all tools specified in mise.toml mise install
+curl https://mise.run | sh
 
 # Activate mise in the current shell by adding the following to your shell configuration file
 echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
 
-# Install all tools specified in mise.toml mise install
+# Install all tools specified in mise.toml
 mise install
 ```
 
 ## Structure
+
+- `/2025/` — Markdown files organized by year and month (e.g., `/2025/05.md`)
+- `/src/` — TypeScript source code for the API server
+- `/bin/` — Utility scripts (e.g., for creating monthly files)
 
 The content is organized by year and month:
 
@@ -30,6 +39,21 @@ The content is organized by year and month:
   /06.md  # June 2025
   ...
 ```
+
+## Running the API Server
+
+The project includes a minimal API server (powered by [Hono](https://hono.dev/) and Bun) that serves TIL markdown files.
+
+To start the development server:
+
+```sh
+bun run dev
+```
+
+- Visit [http://localhost:3000/](http://localhost:3000/) to see the welcome message.
+- Access a monthly TIL file via: `GET /api/:year/:month` (e.g., `/api/2025/05`).
+
+If the file does not exist, the API returns a 404 JSON error.
 
 ## Usage
 
