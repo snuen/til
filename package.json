@@ -8,14 +8,12 @@
     "lint": "markdownlint \"**/*.md\" --ignore node_modules",
     "lint:fix": "markdownlint \"**/*.md\" --ignore node_modules --fix",
     "format": "prettier --write \"**/*.md\"",
-    "check": "bun run lint && bun run format",
-    "prepare": "husky"
+    "check": "bun run lint && bun run format"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "husky": "^9.1.7",
     "markdownlint-cli": "^0.44.0",
     "prettier": "^3.5.3",
     "@types/bun": "latest"

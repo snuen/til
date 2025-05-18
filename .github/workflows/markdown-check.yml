@@ -1,0 +1,17 @@
+name: Markdown Lint & Format
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  markdown:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: 'latest'
+      - run: bun install --frozen-lockfile
+      - run: bun run check

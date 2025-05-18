@@ -56,12 +56,14 @@ Each entry should include:
 
 ## Markdown Linting and Formatting
 
-This project includes tools for linting and formatting markdown files to maintain consistent style:
+Markdown linting and formatting are automatically enforced on every push using
+[GitHub Actions](.github/workflows/markdown-check.yml). This ensures all markdown files follow consistent style and
+formatting in the repository.
 
 - **markdownlint**: Checks markdown files for style issues
 - **prettier**: Formats markdown files consistently
 
-Run the following commands to lint and format markdown files:
+You can also run the following commands locally to check or fix markdown files before pushing:
 
 ```bash
 # Lint markdown files
