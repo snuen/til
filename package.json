@@ -4,7 +4,7 @@
   "description": "A collection of concise write-ups on small things I learn day to day across various languages and technologies.",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --hot src/index.ts",
     "lint": "markdownlint \"**/*.md\" --ignore node_modules",
     "lint:fix": "markdownlint \"**/*.md\" --ignore node_modules --fix",
     "format": "prettier --write \"**/*.md\"",
@@ -21,5 +21,8 @@
   "private": true,
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "hono": "^4.7.10"
   }
 }
