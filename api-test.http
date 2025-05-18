@@ -1,0 +1,8 @@
+### Test root endpoint
+GET http://localhost:3000/
+
+### Test API for existing file
+GET http://localhost:3000/api/2025/05
+
+### Test API for non-existent file
+GET http://localhost:3000/api/2025/99
