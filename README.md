@@ -65,18 +65,18 @@ formatting in the repository.
 
 You can also run the following commands locally to check or fix markdown files before pushing:
 
-```bash
+```sh
 # Lint markdown files
-npm run lint
+bun run lint
 
 # Lint and fix markdown files
-npm run lint:fix
+bun run lint:fix
 
 # Format markdown files
-npm run format
+bun run format
 
 # Run both linting and formatting
-npm run check
+bun run check
 ```
 
 ## Example Entry Format
