@@ -93,11 +93,13 @@ docker rm CONTAINER_ID
 ### Troubleshooting Docker
 
 - If you can't access the server at port 8080, check if another service is using that port:
+
   ```sh
   lsof -i :8080
   ```
 
 - If you need to rebuild after code changes:
+
   ```sh
   docker stop $(docker ps -q --filter ancestor=til-app) # Stop running containers
   docker build -t til-app . # Rebuild image
@@ -105,6 +107,7 @@ docker rm CONTAINER_ID
   ```
 
 - If you need to use a different port:
+
   ```sh
   docker run -d -p 3000:8080 til-app # Maps container's 8080 port to host's 3000 port
   ```
