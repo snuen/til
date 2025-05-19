@@ -55,6 +55,60 @@ bun run dev
 
 If the file does not exist, the API returns a 404 JSON error.
 
+## Running with Docker
+
+You can build and run the API server in a Docker container:
+
+```sh
+# Build the Docker image
+docker build -t til-app .
+
+# Run the container
+docker run -d -p 8080:8080 til-app
+```
+
+### Docker Usage
+
+- The server will be available at [http://localhost:8080/](http://localhost:8080/) or [http://0.0.0.0:8080/](http://0.0.0.0:8080/).
+- Access endpoints the same way as the development server, but using port 8080:
+  - Root endpoint: `GET http://localhost:8080/`
+  - TIL entries: `GET http://localhost:8080/api/:year/:month` (e.g., `http://localhost:8080/api/2025/05`)
+
+### Docker Commands
+
+```sh
+# List running containers
+docker ps
+
+# View container logs
+docker logs CONTAINER_ID
+
+# Stop the container
+docker stop CONTAINER_ID
+
+# Remove the container
+docker rm CONTAINER_ID
+```
+
+### Troubleshooting Docker
+
+- If you can't access the server at port 8080, check if another service is using that port:
+  ```sh
+  lsof -i :8080
+  ```
+
+- If you need to rebuild after code changes:
+  ```sh
+  docker stop $(docker ps -q --filter ancestor=til-app) # Stop running containers
+  docker build -t til-app . # Rebuild image
+  docker run -d -p 8080:8080 til-app # Start new container
+  ```
+
+- If you need to use a different port:
+  ```sh
+  docker run -d -p 3000:8080 til-app # Maps container's 8080 port to host's 3000 port
+  ```
+
 ## Usage
 
 ### Adding Entries

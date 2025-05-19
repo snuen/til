@@ -20,4 +20,14 @@ app.get('/api/:year/:month', async c => {
   }
 });
 
-export default app;
+// Parse PORT environment variable with default of 8080
+const port = parseInt(process.env.PORT || '8080', 10);
+
+export default {
+  port,
+  hostname: '0.0.0.0', // Use 0.0.0.0 to listen on all network interfaces (important for Docker)
+  fetch: app.fetch,
+};
+
+// Log the actual port being used
+console.log(`Server starting on http://0.0.0.0:${port}`);
