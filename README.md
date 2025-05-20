@@ -69,7 +69,8 @@ docker run -d -p 8080:8080 til-app
 
 ### Docker Usage
 
-- The server will be available at [http://localhost:8080/](http://localhost:8080/) or [http://0.0.0.0:8080/](http://0.0.0.0:8080/).
+- The server will be available at [http://localhost:8080/](http://localhost:8080/) or
+  [http://0.0.0.0:8080/](http://0.0.0.0:8080/).
 - Access endpoints the same way as the development server, but using port 8080:
   - Root endpoint: `GET http://localhost:8080/`
   - TIL entries: `GET http://localhost:8080/api/:year/:month` (e.g., `http://localhost:8080/api/2025/05`)
