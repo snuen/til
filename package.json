@@ -8,15 +8,18 @@
     "lint": "markdownlint \"**/*.md\" --ignore node_modules",
     "lint:fix": "markdownlint \"**/*.md\" --ignore node_modules --fix",
     "format": "prettier --write \"**/*.md\"",
-    "check": "bun run lint && bun run format"
+    "check": "bun run lint && bun run format",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/bun": "latest",
     "markdownlint-cli": "^0.44.0",
     "prettier": "^3.5.3",
-    "@types/bun": "latest"
+    "vitest": "^3.1.4"
   },
   "private": true,
   "peerDependencies": {
