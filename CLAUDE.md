@@ -11,7 +11,7 @@ The project serves as a personal knowledge collection system with structured dai
 
 **Content Structure:**
 
-- Monthly markdown files organized in year directories (`/2025/05.md`, `/2025/06.md`)
+- Monthly markdown files organized in year directories (`/2025/05.md`, `/2025/06.md`, etc.)
 - Each file contains daily TIL entries with consistent formatting
 - Template-based entry creation with automated file generation
 
