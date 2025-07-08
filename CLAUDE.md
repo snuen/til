@@ -108,6 +108,12 @@ docker run -d -p 8080:8080 til-app
 - Template comments included for consistent formatting
 - Automated markdown linting enforces style consistency
 
+**Rules:**
+
+- Use `### Example/Code` for code snippets
+- Use `### References` for external links and resources
+- Ensure all entries are comprehensive, self-contained, and full of detailed explanations
+
 ## Key Files
 
 - `src/app.ts` - Main API server implementation
