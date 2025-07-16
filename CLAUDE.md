@@ -113,6 +113,7 @@ docker run -d -p 8080:8080 til-app
 - Use `### Example/Code` for code snippets
 - Use `### References` for external links and resources
 - Ensure all entries are comprehensive, self-contained, and full of detailed explanations
+- When reading files, limit to 500 lines maximum to manage context efficiently
 
 ## Key Files
 
